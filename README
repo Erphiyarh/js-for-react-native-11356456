@@ -1,0 +1,62 @@
+README
+
+Student ID: [11356456]
+
+Project: Array Manipulation and User Profile Creation
+
+This project consists of three tasks:
+
+Task 1: Array Manipulation
+
+The processArray function takes an array of numbers and returns a new array where each even number is squared and each odd number is tripled.
+
+Task 2: Format Array Strings
+
+The formatArrayStrings function takes two arrays as arguments: an array of strings and an array of numbers processed by the processArray function. The function modifies each string based on its corresponding number:
+
+- Capitalizes the entire string if the number is even.
+- Converts the string to lowercase if the number is odd.
+
+Task 3: Create User Profiles
+
+The createUserProfiles function takes an array of names and the array of modified names from Task 2 and returns an array of objects, each containing the original name, modified name, and an ID (auto-incremented starting from 1).
+
+Usage:
+
+To use these functions, you can create separate JavaScript files for each task and then import them into your main script.
+
+// Import the array manipulation functions
+import { processArray } from './arrayManipulation.js';
+
+// Import the string formatting function
+import { formatArrayStrings } from './arrayManipulation.js';
+
+// Import the user profile creation function
+import { createUserProfiles } from './userInfo.js';
+
+// Create an array of numbers
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Process the array using the processArray function
+const processedNumbers = processArray(numbers);
+
+// Create an array of strings
+const names = ['John', 'Jane', 'Bob', 'Alice', 'Tom'];
+
+// Format the strings using the formatArrayStrings function
+const formattedNames = formatArrayStrings(names, processedNumbers);
+
+// Create user profiles using the createUserProfiles function
+const userProfiles = createUserProfiles(names, formattedNames);
+
+// Log the user profiles to the console
+console.log(userProfiles);
+
+
+This will output an array of objects, each containing the original name, modified name, and ID.
+
+Additional Notes:
+
+* The arrayManipulation.js file contains both the processArray and formatArrayStrings functions.
+* The userInfo.js file contains the createUserProfiles function.
+* The functions are designed to be modular and reusable, so you can use them in other projects as needed.
